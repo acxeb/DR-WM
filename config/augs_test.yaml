@@ -1,0 +1,46 @@
+augs:
+  identity: 1
+  jpeg: 1
+  resize: 1
+  gaussian_blur: 1
+  MedianBlur: 1
+  Dropout: 1
+  simswap: 1
+  HiSD: 1
+  GANimation: 1
+  stargan: 1
+  Uniface_swap: 1
+
+
+augs_params:
+  resize:
+    down_scale: 0.5
+  crop:
+    size: 0.5
+  rotate:
+    angle: 10
+  jpeg:
+    Q: 50
+  gaussian_blur:
+    kernel_size: [ 3,3 ]
+    sigma: [ 2,2 ]
+  MedianBlur:
+    kernel_size: [ 3,3 ]
+  brightness:
+    brightness: 0.5
+  contrast:
+    contrast: 0.5
+  saturation:
+    saturation: 0.5
+  hue:
+    hue: 0.1
+  Dropout:
+    prob: 0.5
+  perspective:
+    min_distortion_scale: 0.1
+    max_distortion_scale: 0.5
+  crop_resize_pad:
+    'resize_min': 0.7
+    'resize_max': 1.5
+    'crop_min': 0.5
+    'crop_max': 0.66
